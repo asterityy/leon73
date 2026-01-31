@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Leon Clinic Design System - Premium Veterinary Aesthetic */
+
+@layer base {
+  :root {
+    /* Main backgrounds */
+    --background: 50 33% 95%; /* #f6f5ed - кремовый */
+    --foreground: 30 6% 17%; /* #2c2c2a - почти чёрный */
+
+    /* Cards & surfaces */
+    --card: 47 35% 89%; /* #e5d5a9 - светлое золото */
+    --card-foreground: 30 6% 17%;
+
+    --popover: 50 33% 95%;
+    --popover-foreground: 30 6% 17%;
+
+    /* Primary - яркое золото */
+    --primary: 40 68% 44%; /* #bc8c24 */
+    --primary-foreground: 50 33% 95%;
+
+    /* Secondary - бежевый */
+    --secondary: 37 27% 69%; /* #c6b79a */
+    --secondary-foreground: 30 30% 30%; /* #644c35 */
+
+    /* Muted - серый */
+    --muted: 214 6% 69%; /* #acb0b4 */
+    --muted-foreground: 60 4% 44%; /* #76726b */
+
+    /* Accent - золотистый */
+    --accent: 38 53% 58%; /* #caa460 */
+    --accent-foreground: 30 6% 17%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 50 33% 95%;
+
+    /* Borders & inputs */
+    --border: 37 27% 69%;
+    --input: 37 27% 80%;
+    --ring: 40 68% 44%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors */
+    --gold: 40 68% 44%;
+    --gold-light: 47 35% 89%;
+    --gold-accent: 38 53% 58%;
+    --brown: 30 30% 30%;
+    --brown-dark: 30 6% 17%;
+    --olive: 120 6% 38%;
+    --gray-warm: 60 4% 44%;
+
+    /* Sidebar */
+    --sidebar-background: 47 35% 89%;
+    --sidebar-foreground: 30 6% 17%;
+    --sidebar-primary: 40 68% 44%;
+    --sidebar-primary-foreground: 50 33% 95%;
+    --sidebar-accent: 38 53% 58%;
+    --sidebar-accent-foreground: 30 6% 17%;
+    --sidebar-border: 37 27% 69%;
+    --sidebar-ring: 40 68% 44%;
+  }
+
+  .dark {
+    --background: 30 6% 12%;
+    --foreground: 47 35% 89%;
+
+    --card: 30 6% 17%;
+    --card-foreground: 47 35% 89%;
+
+    --popover: 30 6% 17%;
+    --popover-foreground: 47 35% 89%;
+
+    --primary: 40 68% 50%;
+    --primary-foreground: 30 6% 12%;
+
+    --secondary: 30 30% 30%;
+    --secondary-foreground: 47 35% 89%;
+
+    --muted: 30 6% 25%;
+    --muted-foreground: 214 6% 69%;
+
+    --accent: 38 53% 58%;
+    --accent-foreground: 30 6% 12%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 47 35% 89%;
+
+    --border: 30 6% 25%;
+    --input: 30 6% 25%;
+    --ring: 40 68% 50%;
+
+    --sidebar-background: 30 6% 12%;
+    --sidebar-foreground: 47 35% 89%;
+    --sidebar-primary: 40 68% 50%;
+    --sidebar-primary-foreground: 30 6% 12%;
+    --sidebar-accent: 30 6% 20%;
+    --sidebar-accent-foreground: 47 35% 89%;
+    --sidebar-border: 30 6% 25%;
+    --sidebar-ring: 40 68% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+  }
+
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold-light)) 0%, hsl(var(--gold-accent)) 50%, hsl(var(--gold)) 100%);
+  }
+
+  .shadow-gold {
+    box-shadow: 0 10px 40px -10px hsl(var(--gold) / 0.3);
+  }
+
+  .shadow-elegant {
+    box-shadow: 0 4px 20px -4px hsl(var(--brown-dark) / 0.15);
+  }
+}
